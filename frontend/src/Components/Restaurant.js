@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Restaurant = ({restaurant}) => {
   return (
     <div className='col-sm-12 col-md-6 col-lg-3 my-3'>
     <div className='card p-3 rounded'>
+      <Link to={`/eats/stores/${restaurant._id}/menus`}
+      className='btn btn-block'>
+        <img className='card-img-top mx-auto'
+        src={restaurant.images[0].url}
+        alt={restaurant.name}
+        ></img>
+      </Link>
         <img className='card-img-top mx-auto'
             src={restaurant.images[0].url}
             alt={restaurant.name}

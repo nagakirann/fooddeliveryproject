@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import {useDispatch, useSelector } from 'react-redux';
 import { getRestaurants } from '../Actions/restaurantAction';
+import './css/count.css';
 
 const CountRestaurant = () => {
     const dispatch=useDispatch();
@@ -16,7 +17,7 @@ const CountRestaurant = () => {
         <p className='NameOfRestro'>
             {showVegOnly?pureVegRestaurantsCount:count}
             <span className='Restro'>
-                {showVegOnly?pureVegRestaurantsCount===1?"restaurant":"restaurants":count===1?"restaurant":"restaurants"}
+                {showVegOnly?pureVegRestaurantsCount===1?" restaurant":" restaurants":count===1?" restaurant":" restaurants"}
             </span>
             <hr/>
         </p>

@@ -5,6 +5,7 @@ import Loader from "../Components/Layout/Loader.js";
 import Message from '../Components/Message';
 import {useDispatch,useSelector} from  'react-redux';
 import CountRestaurant from './CountRestaurant';
+
 const Home = () => {
     const dispatch=useDispatch();
     const {
