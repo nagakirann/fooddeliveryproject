@@ -34,12 +34,12 @@ export const cartReducer=(state=initialstate,action)=>{
             return{
                 ...state,
                 cartItems:state.cartItems.map((item)=>
-                item.fooditem===action.payload.fooditem?{
+                item.fooditem===action.payload.fooditemId?{
                     ...item,
                     quantity:action.payload.quantity,
                 }
                 :item
-                )
+                ),
             };
 
         case REMOVE_ITEM_CART:
