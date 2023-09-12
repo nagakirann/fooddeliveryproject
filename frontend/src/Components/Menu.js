@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { useParams, useSearchParams } from 'react-router-dom';
 import {getMenus} from '../Actions/menuAction';
 import { getRestaurants } from '../Actions/restaurantAction';

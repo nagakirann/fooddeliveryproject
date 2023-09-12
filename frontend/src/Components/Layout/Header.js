@@ -1,7 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom';
 // import './App.css';
 
 const Header = () => {
+    const {cartItems}=useSelector((state)=>state.cart)
   return (
   <>
     <nav className='navbar row sticky-top'>
@@ -32,8 +35,10 @@ const Header = () => {
      {/* Login */}
      <div className='col-12 col-md-3 mt-4 mt-md-0 text-center'>
         <button className='btn' id='login_btn'>Login</button>
-        <span className='ml-3' id='cart'>Cart</span>
-        <span className='ml-1' id="cart_count">2</span>
+        <Link to="/cart" style={{textDecoration:'none'}}>
+            <span className='ml-3' id='cart'>Cart</span>
+            <span className='ml-1' id="cart_count">{cartItems.length}</span>
+        </Link>
     </div>
 
 

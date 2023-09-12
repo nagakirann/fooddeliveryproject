@@ -28,8 +28,12 @@ import {
     } from "redux";
     import thunk from "redux-thunk";
     import { restaurantReducer } from './Reducers/restaurantReducer';
+import { menuReducer } from "./Reducers/menuReducer";
+import { cartReducer } from "./Reducers/cartReducer";
     const reducer = combineReducers({
-    restaurants: restaurantReducer
+    restaurants: restaurantReducer,
+    menus:menuReducer,
+    cart:cartReducer
     });
     let initialState = {};
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

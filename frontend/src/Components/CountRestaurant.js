@@ -14,7 +14,7 @@ const CountRestaurant = () => {
       {loading?(<p>Loading Restaurant Count....</p>):error?(
         <p>Error:{error}</p>
       ):(
-        <p className='NameOfRestro'>
+        <p className='NumOfRestro'>
             {showVegOnly?pureVegRestaurantsCount:count}
             <span className='Restro'>
                 {showVegOnly?pureVegRestaurantsCount===1?" restaurant":" restaurants":count===1?" restaurant":" restaurants"}
